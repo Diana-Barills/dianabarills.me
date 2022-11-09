@@ -42,6 +42,21 @@ window.onresize = function () {
     backToTop();
 }
 
+
+
+$('.grid').isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+        columnWidth: '.grid-sizer',
+        gutter: '.gutter-sizer'
+      },
+      itemSelector: '.grid-item',
+      percentPosition: true
+  })
+
+
+
 // deal with sticky nav on window resize
 function navOnResize() {
     if (window.scrollY > 0) {
