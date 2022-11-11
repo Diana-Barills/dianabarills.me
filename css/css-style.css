@@ -953,9 +953,9 @@ font-weight: 800;
     align-items: center;
     transition: 0.5s;
 }
-/* .fav-box {
-    margin-bottom: 25px;
-} */
+.fav-box {
+    margin-bottom: 30px;
+}
 .favs{
     width: 75%;
     column-gap: calc(-16px + 3vw);
