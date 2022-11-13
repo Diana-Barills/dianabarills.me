@@ -203,7 +203,7 @@ a:hover, .link:hover {
 
 /* FirstPage */
 @font-face {
-    font-family: 'Windblows Free';
+    font-family:'Windblows Free';
     font-style: normal;
     font-weight: 400;
     src: local('Windblows Free'), url('https://fonts.cdnfonts.com/s/41272/Windblows Free.woff') format('woff');
