@@ -4,6 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
 
+@font-face {
+    font-family: didot;
+    src: url('./../font/Didot\ LT\ Std\ Italic.otf');
+    src: url('./../font/Didot Regular/Didot\ Regular.ttf') format('☺');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 /* COLORS */
 :root {
     --text: black;
@@ -58,7 +66,7 @@ body {
   
     font-size: calc(14px + 0.4vw);
     line-height: calc(24px + 0.6vw);
-    font-weight: 300;
+    font-weight: 400;
     color: var(--text);
     min-height: 100vh;
     overflow-x: hidden;
@@ -109,7 +117,9 @@ background-color:#bc27a9!important;
     position: relative;
     bottom: -5px;
 }
-
+.font-gorgira{
+    font-family: Georgia, 'Times New Roman', Times, serif!important;
+}
 
 @keyframes fadeInActivate {
     to {
@@ -135,7 +145,9 @@ p:last-child {
     letter-spacing: calc(1px + 0.1vw);
     font-family: Charis SIL;
 }
-
+.title li{
+    font-family: Charis SIL;
+}
 .bold {
     font-weight: 700;
 }
@@ -198,7 +210,8 @@ a:hover, .link:hover {
 }
 
 #transitioningname span{
-    font-family: 'GFS Didot', serif!important;
+    font-family: 'GFS Didot'!important;
+
     /* font-family: 'Windblows Free', sans-serif; */
     /* font-style: italic; */
     font-size: 2.5rem;
@@ -263,7 +276,7 @@ a:hover, .link:hover {
     color: black;
     padding: 0px 0px;
     font-size: 2rem;
-    font-family: 'GFS Didot', serif!important;
+    font-family: 'GFS Didot'!important;
     font-weight: 500;
     font-style: normal;
 }
@@ -279,7 +292,7 @@ a:hover, .link:hover {
     animation-duration: 1s;
     position: relative;
      /* font-family: Georgia, 'Times New Roman', Times, serif; */
-     font-family: 'GFS Didot', serif;
+     font-family: 'GFS Didot';
 }
 
 #to-new-page{
@@ -658,7 +671,8 @@ header a {
     position: relative;
     display: block;
     color: white;
-    text-shadow: 0 0 19px brown;
+    /* text-shadow: 0 0 19px brown; */
+    text-shadow: 0 0 15px rgb(160, 157, 157);
     /* text-shadow: 0px 0px 20px rgb(255, 0, 43); */
 }
 .d-flex{
@@ -671,11 +685,12 @@ header a:hover {
     /* color: var(--dark); */
 }
 .nav-bar a{
-    color: #bc27a9!important; 
+    color: black!important; 
+    font-weight:800;
     transition: none;
 }
 .nav-bar a:hover {
-    border-bottom: 4px solid #bc27a9;
+    border-bottom: 4px solid black;
     /* color: var(--dark); */
 }
 .nav-bar .dropdown a:hover {
@@ -710,7 +725,7 @@ header ul li:last-child {
     pointer-events: none;
     font-weight: 600;
     /* border-bottom: 4px solid var(--accent); */
-    border-bottom: 4px solid #bc27a9;
+    border-bottom: 4px solid black;
 }
 
 .has-dropdown {
@@ -867,8 +882,8 @@ font-weight: 800;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     transition: 0.5s;
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
-    /* filter: drop-shadow(0px 0px 10px rgba(255, 0, 43, 0.532)); */
+    /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4)); */
+    filter: drop-shadow(0px 0px 10px rgba(255, 0, 43, 0.532));
     background: linear-gradient(rgba(166, 179, 210, 0.9), rgba(227, 231, 241, 0.7));
 }
 
@@ -1913,7 +1928,7 @@ right: 70px;
    height: 80vh;
 }
 .didot{
-    font-family: 'GFS Didot', serif!important;
+    font-family: 'GFS Didot'!important;
 }
 
 /* button front page   */
@@ -2023,6 +2038,9 @@ img {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     	grid-auto-rows: 150px;
     }
+    .cover-img img{
+        height: 30vh;
+    }
 }
 
 
@@ -2074,8 +2092,9 @@ img {
     cursor: pointer;
     line-height: 1;
     font-family: 'GFS Didot', serif!important;
-    font: 700 1.2rem;
-    padding: .55em .7em;
+    font-weight: 500;
+    font-size: 18px;
+    padding: .40em .55em;
     letter-spacing: 0.05rem;
 }
 .btn:focus {
