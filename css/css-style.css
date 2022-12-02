@@ -294,7 +294,8 @@ a:hover, .link:hover {
     color: black;
     padding: 0px 0px;
     font-size: 2rem;
-    font-family: 'GFS Didot'!important;
+    /* font-family: 'GFS Didot'!important; */
+    font-family: 'didot-bold'!important;
     font-weight: 500;
     font-style: normal;
 }
@@ -1989,7 +1990,8 @@ right: 70px;
     position: relative;
     min-width: 8.23em;
     text-decoration: none;
-    font-family: 'GFS Didot', serif!important;
+    font-family: 'didot-regular'!important;
+    /* font-family: 'GFS Didot', serif!important; */
     font-size: 1.25rem;
 }
 
