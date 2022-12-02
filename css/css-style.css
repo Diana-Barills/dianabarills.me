@@ -1966,7 +1966,8 @@ right: 70px;
 }
 .cover-img img{
     width: 100%;
-   height: 80vh;
+   /* height: 80vh; */
+   height: 100%;
 }
 .didot{
     font-family: 'didot-italic'!important;
@@ -2124,7 +2125,8 @@ img {
     	grid-auto-rows: 150px;
     }
     .cover-img img{
-        height: 30vh;
+        /* height: 30vh; */
+        height: 100%;
     }
 }
 
