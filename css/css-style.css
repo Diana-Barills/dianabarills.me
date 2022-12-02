@@ -11,7 +11,24 @@
     font-weight: normal;
     font-style: normal;
   }
-
+  @font-face {
+    font-family: didot-regular;
+    src: url('./../font/Didot Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: didot-italic;
+    src: url('./../font/Didot\ LT\ Std\ Italic.otf');
+    font-weight:normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: didot-bold;
+    src: url('./../font/Didot\ LT\ Std\ Bold.otf');
+    font-weight: bold;
+    font-style:normal;
+  }
 /* COLORS */
 :root {
     --text: black;
@@ -89,7 +106,7 @@ body {
 }
 .paracolor{
     color: blueviolet;
-    font-size: 1.2rem;
+    font-size: calc(14px + 0.4vw);
     font-family: word;
 }
 
@@ -210,7 +227,8 @@ a:hover, .link:hover {
 }
 
 #transitioningname span{
-    font-family: 'GFS Didot'!important;
+    /* font-family: 'GFS Didot'!important; */
+    font-family: 'didot-bold'!important;
 
     /* font-family: 'Windblows Free', sans-serif; */
     /* font-style: italic; */
@@ -292,7 +310,8 @@ a:hover, .link:hover {
     animation-duration: 1s;
     position: relative;
      /* font-family: Georgia, 'Times New Roman', Times, serif; */
-     font-family: 'GFS Didot';
+     /* font-family: 'GFS Didot'; */
+     font-family: 'didot-regular';
 }
 
 #to-new-page{
@@ -672,7 +691,7 @@ header a {
     display: block;
     color: white;
     /* text-shadow: 0 0 19px brown; */
-    text-shadow: 0 0 15px rgb(160, 157, 157);
+    /* text-shadow: 0 0 15px rgb(160, 157, 157); */
     /* text-shadow: 0px 0px 20px rgb(255, 0, 43); */
 }
 .d-flex{
@@ -1065,7 +1084,8 @@ footer {
     padding: 80px;
     margin-top: calc(18px + 3vw);
     position: relative;
-    bottom: -45px;
+    /* bottom: -45px; */
+    bottom: 0px;
     font-size: calc(14px + 0.4vw)!important;
     font-family: var(--body-font)!important;
 }
@@ -1256,7 +1276,7 @@ svg.triangle {
 .skillsetdef{
     text-align: left;
     margin: 20px 0px;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     font-weight: bold;
     font-style: italic;
     color: black;
@@ -1481,6 +1501,7 @@ svg.triangle {
 
 .funfactsfavi{
     width: 128px;
+    max-width:fit-content;
 }
 
 @media (max-width: 1700px) {
@@ -1510,6 +1531,7 @@ svg.triangle {
 }
 
 @media (max-width: 1150px) {
+   
     .fact-imgs {
         grid-template-columns: 1fr 1fr;
         column-gap: calc(-10px + 2vw);
@@ -1521,6 +1543,7 @@ svg.triangle {
 }
 
 @media (max-width: 800px) {
+  
     .first-sec{
         display: flex;
         flex-direction: column;
@@ -1554,16 +1577,19 @@ svg.triangle {
 }
 
 .fav-box {
+    
     grid-template-columns: 1fr 7fr;
 }
 
 .flaticoncolor{
-    display: flex;
+    height: 14rem;
+    width: 14rem;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: #ece7d3;
     /* background-color: rgba(135, 135, 135, 0.499); */
-    border-radius: 100%;
+    border-radius: 50%;
     padding: 25px;
 }
 
@@ -1597,8 +1623,10 @@ svg.triangle {
 
 @media (max-width: 600px) {
     .fav-box {
+        display: block;
         align-items: start;
         grid-template-columns: 1fr 7fr !important;
+        text-align: center;
     }
     .fav-box .icon {
         margin-top: 5px;
@@ -1721,6 +1749,10 @@ svg.triangle {
 
 
 @media (max-width: 1070px){
+    .flaticoncolor{
+        height: 12rem;
+        width: 12rem;
+    }
     #uxdesign1{
         flex-direction: column;
         align-items: center;
@@ -1746,6 +1778,13 @@ svg.triangle {
 }
 
 @media (max-width: 550px){
+    .funfactsfavi{
+        width: 80px;
+    }
+    .flaticoncolor{
+        height: 8rem;
+        width: 8rem;
+    }
     #uxdesign1des{
         margin: 40px 10px;
         font-size: 0.7rem;
@@ -1928,7 +1967,7 @@ right: 70px;
    height: 80vh;
 }
 .didot{
-    font-family: 'GFS Didot'!important;
+    font-family: 'didot-italic'!important;
 }
 
 /* button front page   */
@@ -2007,7 +2046,8 @@ img {
 .grid-wrapper {
 	display: grid;
 	grid-gap: 10px;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	/* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
+	grid-template-columns: repeat(auto-fit, minmax(790px, 1fr));
 	/* grid-auto-rows: 270px; */
 	grid-auto-flow: dense;
 }
@@ -2025,10 +2065,52 @@ img {
 	height: 400px;
 }
 
-@media (max-width: 1540px){
+@media (max-width: 3780px){
+    .grid-wrapper {
+
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    	grid-auto-rows: 400px;
+    }
+}
+@media (max-width: 2780px){
+    .grid-wrapper {
+
+        grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    	
+    }
+}
+@media (max-width: 2240px){
+    .grid-wrapper {
+
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    	grid-auto-rows: 200px;
+    }
+}
+@media (max-width: 1740px){
     .grid-wrapper {
 
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    	grid-auto-rows: 200px;
+    }
+}
+@media (max-width: 1280px){
+    .grid-wrapper {
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    	grid-auto-rows: 200px;
+    }
+}
+@media (max-width: 1000px){
+    .grid-wrapper {
+
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    	grid-auto-rows: 200px;
+    }
+}
+@media (max-width: 970px){
+    .grid-wrapper {
+
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     	grid-auto-rows: 200px;
     }
 }
@@ -2043,7 +2125,19 @@ img {
     }
 }
 
+@media (max-width: 520px){
+    .grid-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    	grid-auto-rows: 120px;
+    }
+}
+@media (max-width: 470px){
+    .grid-wrapper {
 
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    	grid-auto-rows: 100px;
+    }
+}
 
 /* button   */
 .draw-border {
@@ -2074,12 +2168,12 @@ img {
 .draw-border:hover {
     color: black;
 }
-.draw-border:hover::before, .draw-border:hover::after {
+/* .draw-border:hover::before, .draw-border:hover::after {
     border-color: #bc27a9;
     transition: border-color 0s, width 0.25s, height 0.25s;
     width: 100%;
     height: 100%;
-}
+} */
 .draw-border:hover::before {
     transition-delay: 0s, 0s, 0.25s;
 }
@@ -2097,6 +2191,6 @@ img {
     padding: .40em .55em;
     letter-spacing: 0.05rem;
 }
-.btn:focus {
+/* .btn:focus {
     outline: 2px dotted #bc27a9;
-}
+} */
